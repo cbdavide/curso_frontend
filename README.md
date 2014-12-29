@@ -1,2 +1,2 @@
 Curso profesional de frontend
-Mejorand.la
+Mejorando.la
