@@ -1,14 +1,9 @@
 @import "normalize.styl"
-
-@font-face
-  font-family 'Varela Round'
-  font-style normal
-  font-weight 400
-  src: local('Varela Round'), local('VarelaRound-Regular'), url(http://fonts.gstatic.com/s/varelaround/v6/APH4jr0uSos5wiut5cpjrnhCUOGz7vYGh680lGh-uXM.woff) format('woff')
-
+@import "fonts.styl"
 
 gris_oscuro = #333
 gris_claro = #818181
+mayenta = #BD255B
 
 a
   text-decoration none
@@ -16,13 +11,19 @@ body
   font-family 'Varela Round'
   font-size 16px
 
+img
+  vertical-align top
+
 .author
   color gris_claro
 
 .buttom-menu
+  color gris_oscuro
+  font-size 1.5rem
+  left 0
   margin-top -10px
+  padding-left 1.4rem
   position absolute
-  left 0.5em
   top 50%
 
 .container
@@ -30,8 +31,17 @@ body
   font-size 0px
   text-align center
 
+.description
+  border-bottom 1px solid #BBB
+  p:first-child
+    font-size 1.4rem
+    margin-bottom 0
+    margin-top 1.5rem
+  p:last-child
+    margin-top 0
+    margin-bottom 1.4rem
 .header
-  border-bottom 1px solid gris_claro
+  border-bottom 1px solid #BBB
   height 3.5em
   position relative
   // a
@@ -41,19 +51,87 @@ body
     line-height 3.5em
     margin 0
     text-align center
+// *****HERE******
+.image
+  margin 0
+  position relative
+  width 100%
+  img
+    width 100%
+  .actions
+    background rgba(0,0,0,0.2)
+    bottom 0
+    left 0
+    // margin-bottom 0.2em
+    padding 0.7rem 1.2rem
+    position absolute
+    right 0
+    text-align right
+    .action
+      color white
+      font-size 1.5em
+      margin-right 0.3em
+      // &:last-child
+      //   margin-right 0
 
 .menu
   display none
 
 .name
   color gris_oscuro
+.play
+  padding 1.5rem 0
+  .action
+    color gris_claro
+    font-size 1.2rem
+    margin-right 1rem
+    &:last-child
+      margin-right 0
+.playing
+  margin 0 auto
+  &.small
+    width 20rem
 
 .picture
   margin 0
   width 100%
-
-.picture img
-  width 100%
+  img
+    width 100%
+.padding
+  padding 1rem
+.progress
+  margin 1em 0
+  position relative
+  .min
+  .max
+    font-size 0.8rem
+    top -5px
+  .min
+    left 0
+    position absolute
+  .max
+    right 0
+    position absolute
+  .total
+    background gris_claro
+    border-radius 5px
+    height 5px
+    margin 0 auto
+    width 75%
+  .state
+    background mayenta
+    border-radius 5px
+    height 5px
+    position relative
+    width 30%
+  .circle
+    background gris_oscuro
+    border-radius 50%
+    height 10px
+    position absolute
+    right 0
+    top -2px
+    width 10px
 
 .song
   display inline-block
@@ -66,3 +144,5 @@ body
     margin-right 0
   p
     margin 0.5em 0
+.text-center
+  text-align center
