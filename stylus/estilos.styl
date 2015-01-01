@@ -73,10 +73,37 @@ img
       margin-right 0.3em
       // &:last-child
       //   margin-right 0
+.input
+  border 1px solid gris_claro
+  border-radius 5px
+  height 2.5rem
+  padding 0 1em 0 2.5em
+  width 150px
+.logo
+  overflow hidden
+  padding 1.3rem 0
+  .image
+    float left
+    width 122px
 
 .menu
   display none
-
+  background #F0F0F0
+  overflow hidden
+  a
+    color gris_oscuro
+    cursor pointer
+    display block
+    padding 1rem
+    text-transform uppercase
+    border 5px solid transparent
+    &:hover
+      border-top 5px solid gris_oscuro
+  .item
+    float left
+    list-style none
+    &:first-child
+      padding-left 0
 .name
   color gris_oscuro
 .play
@@ -88,9 +115,10 @@ img
     &:last-child
       margin-right 0
 .playing
+  // display none
   margin 0 auto
-  &.small
-    width 20rem
+  // &.small
+  //   width 20rem
 
 .picture
   margin 0
@@ -132,7 +160,29 @@ img
     right 0
     top -2px
     width 10px
-
+.relative
+  position relative
+.search
+  float right
+  margin-right 2rem
+  position relative
+.search-icon
+  border-right 1px solid gris_claro
+  color gris_claro
+  left 0
+  margin-left 0.5em
+  margin-top 0.6em
+  position absolute
+  padding 0.2rem  0.5rem 0.2rem 0
+  top 0
+.close_icon
+  color gris_claro
+  font-size 1.2rem
+  margin-right 0.5rem
+  margin-top 0.5rem
+  right 0
+  position absolute
+  top 0
 .song
   display inline-block
   font-size 1rem
@@ -146,3 +196,52 @@ img
     margin 0.5em 0
 .text-center
   text-align center
+.user
+  float right
+  .image
+    border-radius 50%
+    overflow hidden
+    width 38px
+  .username
+    color gris_claro
+    margin 0.5rem
+    position relative
+    top 9px
+    &:after
+      content ""
+      border-top 9px solid gris_claro
+      border-right 7px solid transparent
+      border-left 7px solid transparent
+      display inline-block
+      margin-left 0.4em
+.wrap
+  width 1000px
+  margin 0 auto
+@media screen and (min-width:480px)
+  .song
+    &:nth-child(even)
+      margin-right 1rem
+  .playing
+    &.medium
+      width 100%
+
+@media screen and (min-width:1000px)
+
+  body
+    background #F0F0F0
+
+  header
+    background white
+
+  .buttom-menu
+    display none
+  .header
+    height auto
+    .title
+      display none
+  .menu
+    display block
+  // .logo
+  //   .image
+  //     img
+  //       width auto
