@@ -82,28 +82,14 @@ img
 .logo
   overflow hidden
   padding 1.3rem 0
+  display none
   .image
     float left
     width 122px
 
 .menu
   display none
-  background #F0F0F0
-  overflow hidden
-  a
-    color gris_oscuro
-    cursor pointer
-    display block
-    padding 1rem
-    text-transform uppercase
-    border 5px solid transparent
-    &:hover
-      border-top 5px solid gris_oscuro
-  .item
-    float left
-    list-style none
-    &:first-child
-      padding-left 0
+
 .name
   color gris_oscuro
 .play
@@ -221,9 +207,9 @@ img
   .song
     &:nth-child(even)
       margin-right 1rem
-  .playing
-    &.medium
-      width 100%
+  // .playing
+  //   &.medium
+  //     width 100%
 
 @media screen and (min-width:1000px)
 
@@ -239,9 +225,24 @@ img
     height auto
     .title
       display none
+  .logo
+    display block
   .menu
     display block
-  // .logo
-  //   .image
-  //     img
-  //       width auto
+    background #F0F0F0
+    overflow hidden
+    .list
+      .item:first-child a
+        padding-left 0
+    .item
+      float left
+      list-style none
+      a
+        color gris_oscuro
+        cursor pointer
+        display block
+        padding 1rem
+        text-transform uppercase
+        border 5px solid transparent
+        &:hover
+          border-top 5px solid gris_oscuro
