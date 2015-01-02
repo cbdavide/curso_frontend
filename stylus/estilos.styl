@@ -113,6 +113,20 @@ img
     width 100%
 .padding
   padding 1rem
+.playlist
+  border-left 1px solid gris_claro
+  display none
+  width 22em
+  padding 0 2em
+  .action
+    color gris_claro
+    font-size 0.8em
+  .list
+    padding 0
+    list-style none
+  .item
+    border-bottom 1px solid gris_claro
+    padding 1rem 0
 .progress
   margin 1em 0
   position relative
@@ -138,6 +152,7 @@ img
     height 5px
     position relative
     width 30%
+    animation 10s state infinite linear
   .circle
     background gris_oscuro
     border-radius 50%
@@ -146,8 +161,11 @@ img
     right 0
     top -2px
     width 10px
+    animation 1s circles infinite
 .relative
   position relative
+.right
+  float right
 .search
   float right
   margin-right 2rem
@@ -203,6 +221,17 @@ img
 .wrap
   width 1000px
   margin 0 auto
+@keyframes state
+  0%
+    width 0
+  100%
+    width 100%
+@keyframes circles
+  0%
+    transform scale(1)
+  100%
+    transform scale(2)
+    opacity 0
 @media screen and (min-width:480px)
   .song
     &:nth-child(even)
@@ -216,21 +245,26 @@ img
   body
     background #F0F0F0
 
-  header
-    background white
-
   .buttom-menu
     display none
   .header
+    background white
+    border none
     height auto
     .title
       display none
   .logo
     display block
+  .music
+    width 32.5rem
+    float left
+    .description
+      display none
   .menu
     display block
     background #F0F0F0
     overflow hidden
+    border-top 1px solid gris_claro
     .list
       .item:first-child a
         padding-left 0
@@ -243,6 +277,17 @@ img
         display block
         padding 1rem
         text-transform uppercase
-        border 5px solid transparent
+        border-top 5px solid transparent
+        border-right 0px solid transparent
+        border-bottom 0px solid transparent
+        border-left 0px solid transparent
         &:hover
           border-top 5px solid gris_oscuro
+  .playlist
+    display block
+  .playing
+    padding-top 1.3em
+    &.large
+      margin 0 auto
+      overflow hidden
+      width 62.5rem
